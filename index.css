@@ -4,9 +4,31 @@ body {
   padding: 0;
 }
 
+header {
+  height: auto;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom {
+  height: auto;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
+  background-color: black;
+}
+
 body {
   margin: 0;
-  min-height: 100vh;
+  width: auto;
   /* border: 10rem solid orange; */
   justify-content: center;
   align-items: center;
@@ -44,7 +66,7 @@ body {
   right: 16px;
 }
 
-/* Bottom right text */
+/* Bottom right text
 .bottom-right {
   position: absolute;
   bottom: 8px;
@@ -52,12 +74,12 @@ body {
 }
 
 /* Centered text */
-.centered {
+/* .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .top-page-items {
   display: grid;
@@ -73,20 +95,24 @@ body {
   display: grid;
 }
 
-.title-low {
+/* .title-low {
   font-size: 30px;
-}
+} */
 
 .slideshow-container {
-  /* border: 5rem solid black; */
-  /* max-width: 100vh; */
-  /* margin: auto; */
+  background-size: cover;
 }
 
 .mySlides-fade {
   /* margin: auto; */
   /* max-width: 100vh; */
   /* border: 5rem solid red; */
+  /* animation: fadeVisibility 0.8s; */
+}
+
+.image {
+  animation: fadeVisibility 0.5s;
+  /* height: auto; */
 }
 
 .prev,
@@ -138,12 +164,12 @@ body {
   background-color: #717171;
 }
 
-.about-us {
+.middle {
   text-align: center;
   font-size: large;
 }
 
-.about-us-2 {
+.bottom {
   background-color: black;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -168,4 +194,39 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .phone-number {
+    display: none;
+  }
+  .prev,
+  .next {
+    top: 28%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .image {
+    max-width: 1300px;
+    max-height: 1300px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
 }
